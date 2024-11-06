@@ -23,6 +23,8 @@ class Product extends Model
         'description',
     ];
 
+    // Relationship BelongsTo
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
