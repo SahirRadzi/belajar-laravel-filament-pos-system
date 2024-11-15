@@ -98,9 +98,12 @@ class ProductResource extends Resource
                 //
             ])
             ->actions([
+               Tables\Actions\ActionGroup::make([
                 Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->color('success'),
                 Tables\Actions\DeleteAction::make(),
+               ])
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
