@@ -2,24 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Category extends Model
+class PaymentMethod extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable =[
         'name',
-        'slug',
-        'description',
-        'is_active',
+        'image',
+        'is_cash',
     ];
 
-    public function product(): HasMany
+    public function order(): HasMany
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Order::class);
     }
 }
