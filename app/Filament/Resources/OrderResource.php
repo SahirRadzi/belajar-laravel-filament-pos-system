@@ -58,6 +58,7 @@ class OrderResource extends Resource
                         ]),
 
                 Forms\Components\Section::make('Order Product')
+                    ->description('Choose your order items.')
                     ->schema([
                         self::getItemsRepeater(),
                     ]),
