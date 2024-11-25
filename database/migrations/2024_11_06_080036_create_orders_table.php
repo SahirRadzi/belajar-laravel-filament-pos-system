@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->nullable();
-            $table->enum('gender',['male','female']);
+            $table->string('gender');
             $table->string('phone')->nullable();
             $table->date('birthday')->nullable();
             $table->double('total_price', 8, 2);
